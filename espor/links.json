@@ -1,0 +1,22 @@
+{
+  "profile": {
+    "name": "Zeki · Espor",
+    "tagline": "PUBG Mobile espor, spiker ağzından. Teknoloji ve yazılım danışmanı @severnikgg.",
+    "avatar": "zeki-espor.jpg"
+  },
+  "featured": {
+    "label": "29-30 Ekim · Complex İstanbul",
+    "title": "Yükselen Yıldızlar Büyük Final",
+    "text": "Bilet bağlantısı PUBG Mobile Espor Türkiye'nin profilinde.",
+    "url": "https://www.instagram.com/pubgmobile_espor_tr/",
+    "cta": "Resmi hesaba git"
+  },
+  "links": [
+    { "title": "Severnik", "subtitle": "@severnikgg", "url": "https://www.instagram.com/severnikgg/", "icon": "instagram" },
+    { "title": "severnik.com", "subtitle": "Medya prodüksiyon ve espor turnuvaları", "url": "https://www.severnik.com", "icon": "globe" },
+    { "title": "PUBG Mobile Espor Türkiye", "subtitle": "@pubgmobile_espor_tr", "url": "https://www.instagram.com/pubgmobile_espor_tr/", "icon": "instagram" },
+    { "title": "Kişisel hesap", "subtitle": "@zekiozaytac", "url": "https://www.instagram.com/zekiozaytac/", "icon": "instagram" },
+    { "title": "YouTube", "subtitle": "Podcast ve videolar", "url": "https://www.youtube.com/channel/UCFSz4a3TQBJDacNCWhB6GTw", "icon": "youtube" },
+    { "title": "Tüm bağlantılar", "subtitle": "wildgenie.github.io/links", "url": "https://wildgenie.github.io/links/", "icon": "globe" }
+  ]
+}

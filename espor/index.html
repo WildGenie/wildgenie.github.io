@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zeki · Espor</title>
+<meta name="description" content="PUBG Mobile espor, spiker ağzından. Severnik, turnuvalar ve tüm bağlantılar.">
+<meta property="og:title" content="Zeki · Espor">
+<meta property="og:description" content="PUBG Mobile espor, spiker ağzından.">
+<meta property="og:image" content="https://wildgenie.github.io/espor/zeki-espor.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0e1424">
+<link rel="icon" href="zeki-espor.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Zeki Espor kimliği: night zemin, gold kimlik rengi, signal kırmızısı yalnız vurgu; başlık Saira Condensed, metin Poppins */
+  :root {
+    --night: #0e1424; --night-raised: #18223b; --line: #2a3656;
+    --ink: #f4f1ea; --ink-muted: #aab3c5;
+    --gold: #ffc83d; --on-gold: #141b2e; --glow: #ffb547; --signal: #d8262e;
+    --display: "Saira Condensed", "Arial Narrow", system-ui, sans-serif;
+    --sans: Poppins, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --radius: 14px;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh; background: var(--night); color: var(--ink);
+    font-family: var(--sans); -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(700px 420px at 50% -120px, rgba(255, 181, 71, 0.18), transparent 70%);
+  }
+  main {
+    max-width: 520px; margin: 0 auto;
+    padding-top: calc(40px + env(safe-area-inset-top));
+    padding-bottom: calc(48px + env(safe-area-inset-bottom));
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  header { text-align: center; margin-bottom: 26px; }
+  .avatar {
+    width: 116px; height: 116px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 14px;
+    border: 3px solid var(--gold); box-shadow: 0 0 0 6px rgba(255, 200, 61, 0.12), 0 14px 34px rgba(0, 0, 0, 0.5);
+  }
+  h1 { font-family: var(--display); font-weight: 800; font-size: 2.6rem; line-height: 0.95; letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 8px; text-wrap: balance; }
+  h1 .dot { color: var(--gold); }
+  .tagline { color: var(--ink-muted); font-size: 0.9rem; line-height: 1.55; margin: 0 auto; max-width: 30em; }
+  .featured {
+    display: block; text-decoration: none; color: var(--on-gold); background: var(--gold);
+    border-radius: var(--radius); padding: 18px 18px 16px; margin-bottom: 20px; position: relative; overflow: hidden;
+    transition: transform .18s ease;
+  }
+  .featured:hover, .featured:focus-visible { transform: translateY(-2px); }
+  .featured .label { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--on-gold); color: var(--gold); padding: 4px 9px; border-radius: 6px; transform: rotate(-3deg); }
+  .featured h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 1.9rem; line-height: 0.95; margin: 10px 0 6px; text-wrap: balance; }
+  .featured p { margin: 0 0 12px; font-size: 0.88rem; line-height: 1.45; }
+  .featured .cta { display: inline-flex; gap: 8px; align-items: center; font-weight: 700; font-size: 0.9rem; border-bottom: 2px solid var(--on-gold); }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  li { min-width: 0; }
+  .link {
+    display: flex; align-items: center; gap: 14px; min-height: 60px; padding: 12px 16px;
+    border-radius: var(--radius); background: var(--night-raised); border: 1px solid var(--line);
+    color: var(--ink); text-decoration: none; transition: border-color .18s ease, transform .18s ease;
+  }
+  .link:hover, .link:focus-visible { border-color: var(--gold); transform: translateY(-1px); }
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .icon { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 200, 61, 0.12); display: grid; place-items: center; }
+  .glyph { width: 19px; height: 19px; background: var(--gold); -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat; }
+  .text { display: flex; flex-direction: column; min-width: 0; }
+  .title { font-weight: 600; font-size: 1rem; }
+  .subtitle { color: var(--ink-muted); font-size: 0.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .arrow { margin-left: auto; color: var(--ink-muted); }
+  footer { text-align: center; color: var(--ink-muted); font-size: 0.76rem; margin-top: 30px; }
+  .error { color: var(--ink-muted); text-align: center; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="avatar" id="avatar" src="zeki-espor.jpg" alt="Zeki'nin espor kulaklıklı çizgi avatarı" width="116" height="116">
+    <h1 id="name">Zeki <span class="dot">·</span> Espor</h1>
+    <p class="tagline" id="tagline"></p>
+  </header>
+  <a class="featured" id="featured" href="https://www.instagram.com/pubgmobile_espor_tr/" rel="noopener">
+    <span class="label" id="f-label"></span>
+    <h2 id="f-title"></h2>
+    <p id="f-text"></p>
+    <span class="cta" id="f-cta"></span>
+  </a>
+  <ul id="links" aria-label="Bağlantılar"></ul>
+  <noscript><p class="error">Bağlantıları görmek için JavaScript'i açın.</p></noscript>
+  <footer>wildgenie.github.io/espor</footer>
+</main>
+<script>
+  const ICONS = {
+    youtube: "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/youtube.svg",
+    instagram: "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/instagram.svg",
+    globe: "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.93 9h-3.47a15.7 15.7 0 0 0-1.3-5.6A8.03 8.03 0 0 1 19.93 11ZM12 4.04c.98 1.3 1.98 3.6 2.43 6.96H9.57C10.02 7.64 11.02 5.34 12 4.04ZM8.84 5.4A15.7 15.7 0 0 0 7.54 11H4.07a8.03 8.03 0 0 1 4.77-5.6ZM4.07 13h3.47c.16 2.1.6 4.04 1.3 5.6A8.03 8.03 0 0 1 4.07 13ZM12 19.96c-.98-1.3-1.98-3.6-2.43-6.96h4.86c-.45 3.36-1.45 5.66-2.43 6.96Zm3.16-1.36c.7-1.56 1.14-3.5 1.3-5.6h3.47a8.03 8.03 0 0 1-4.77 5.6Z"/></svg>')
+  };
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
+  fetch("links.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((d) => {
+      const p = d.profile || {};
+      if (p.tagline) $("tagline").textContent = p.tagline;
+      if (p.avatar) $("avatar").src = p.avatar;
+      const f = d.featured;
+      if (f) {
+        $("featured").href = f.url;
+        $("f-label").textContent = f.label || "";
+        $("f-title").textContent = f.title || "";
+        $("f-text").textContent = f.text || "";
+        $("f-cta").textContent = (f.cta || "Git") + " ↗";
+      } else { $("featured").remove(); }
+      const ul = $("links");
+      (d.links || []).forEach((l) => {
+        const li = el("li"), a = el("a", "link");
+        a.href = l.url; a.rel = "noopener";
+        const ic = el("span", "icon"), g = el("span", "glyph");
+        g.style.setProperty("--src", `url("${ICONS[l.icon] || ICONS.globe}")`);
+        ic.appendChild(g); a.appendChild(ic);
+        const t = el("span", "text");
+        t.appendChild(el("span", "title", l.title));
+        if (l.subtitle) t.appendChild(el("span", "subtitle", l.subtitle));
+        a.appendChild(t);
+        const ar = el("span", "arrow", "↗"); ar.setAttribute("aria-hidden", "true"); a.appendChild(ar);
+        li.appendChild(a); ul.appendChild(li);
+      });
+    })
+    .catch(() => { $("links").replaceWith(el("p", "error", "Bağlantılar yüklenemedi. Sayfayı yenileyin.")); });
+</script>
+</body>
+</html>
