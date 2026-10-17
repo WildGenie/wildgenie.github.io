@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "name": "Bilgehan Zeki Özaytaç",
+    "handle": "@wildgenie",
+    "tagline": "Eğitmen ve Mentor · Uygulamalı Araştırmacı · Teknoloji ve Yazılım Danışmanı",
+    "avatar": "zeki.jpg"
+  },
+  "featured": {
+    "label": "Podcast",
+    "title": "Bir Yapay Zekâya Neden Özür Diledim?",
+    "text": "İki kere özel gençler, üretken yapay zekâ ve bir sohbet botundan dilenen özür.",
+    "url": "https://www.youtube.com/watch?v=U6JQCnTjxUQ",
+    "image": "https://i.ytimg.com/vi/U6JQCnTjxUQ/hqdefault.jpg",
+    "cta": "Tam bölümü izle"
+  },
+  "links": [
+    {
+      "title": "YouTube kanalı",
+      "url": "https://www.youtube.com/channel/UCFSz4a3TQBJDacNCWhB6GTw",
+      "icon": "youtube"
+    },
+    {
+      "title": "Instagram",
+      "subtitle": "@zekiozaytac",
+      "url": "https://www.instagram.com/zekiozaytac/",
+      "icon": "instagram"
+    },
+    {
+      "title": "Web sitesi",
+      "subtitle": "wildgenie.net",
+      "url": "https://wildgenie.net",
+      "icon": "globe"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/wildgenie",
+      "icon": "linkedin"
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com/wildgenie",
+      "icon": "github"
+    },
+    {
+      "title": "X",
+      "subtitle": "@wildgeniezeki",
+      "url": "https://x.com/wildgeniezeki",
+      "icon": "x"
+    },
+    {
+      "title": "ORCID",
+      "subtitle": "0009-0009-1931-9197",
+      "url": "https://orcid.org/0009-0009-1931-9197",
+      "icon": "orcid"
+    }
+  ]
+}
