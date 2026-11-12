@@ -166,17 +166,20 @@
       if (p.tagline) $("tagline").textContent = p.tagline;
       if (p.avatar) $("avatar").src = p.avatar;
 
-      const f = d.featured;
-      if (f) {
-        $("featured").href = f.url;
-        if (f.image) $("f-img").src = f.image;
-        $("f-label").textContent = f.label || "";
-        $("f-title").textContent = f.title || "";
-        $("f-text").textContent = f.text || "";
-        $("f-cta").textContent = f.cta || "İzle";
-      } else {
-        $("featured").remove();
-      }
+      // featured may be one card or a list; extra cards are copies of the first, in order
+      const kart = $("featured");
+      const liste = [].concat(d.featured || []);
+      if (!liste.length) kart.remove();
+      liste.forEach((f, i) => {
+        const k = i ? kart.parentNode.insertBefore(kart.cloneNode(true), $("links")) : kart;
+        if (i) k.querySelectorAll("[id]").forEach((n) => n.removeAttribute("id")), k.removeAttribute("id");
+        k.href = f.url;
+        if (f.image) k.querySelector("img").src = f.image;
+        k.querySelector(".label").textContent = f.label || "";
+        k.querySelector("h2").textContent = f.title || "";
+        k.querySelector("p").textContent = f.text || "";
+        k.querySelector(".cta").textContent = f.cta || "İzle";
+      });
 
       const ul = $("links");
       (d.links || []).forEach((l) => {
